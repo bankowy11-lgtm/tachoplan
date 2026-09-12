@@ -26,6 +26,7 @@ export default function DurationInput({
             max={maxHours}
             inputMode="numeric"
             value={h}
+            onFocus={(e) => e.currentTarget.select()}
             onChange={(e) => {
               const nh = Math.max(0, Math.min(maxHours, Number(e.target.value) || 0));
               onChange(nh * 60 + m);
@@ -40,6 +41,7 @@ export default function DurationInput({
             max={59}
             inputMode="numeric"
             value={m}
+            onFocus={(e) => e.currentTarget.select()}
             onChange={(e) => {
               const nm = Math.max(0, Math.min(59, Number(e.target.value) || 0));
               onChange(h * 60 + nm);

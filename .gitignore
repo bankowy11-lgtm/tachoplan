@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# środowisko lokalne (tokeny API) — nigdy nie commitować
+.env
+.env.local
+
+# artefakty dev service workera (vite-plugin-pwa devOptions)
+dev-dist
